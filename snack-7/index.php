@@ -44,11 +44,19 @@
                     $totalGrades += $grade;
                 }
                 $mediumGrade = round($totalGrades / count($grades));
+<<<<<<< HEAD
                 echo "<div>". $student['name'] . " " . $student['lastname'] . " => ";
                 if ($mediumGrade >= 6) {
                     echo "<span class='pass'>" . $mediumGrade . "</span>" . "</div>";
                 } else {
                     echo "<span class='reject'>" . $mediumGrade . "</span>" . "</div>";
+=======
+                echo $student['name'] . " " . $student['lastname'] . " => ";
+                if ($mediumGrade >= 6) {
+                    echo "<div class='pass'>" . $mediumGrade . "</div>";
+                } else {
+                    echo "<div class='reject'>" . $mediumGrade . "</div>";
+>>>>>>> 6caea060b74feade86c7ea7ee8d3fdecb77e0302
                 }
             }
 

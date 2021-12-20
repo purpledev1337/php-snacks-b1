@@ -43,12 +43,12 @@
                 foreach ($grades as $grade) {
                     $totalGrades += $grade;
                 }
-                $mediumGrade = $totalGrades / count($grades);
+                $mediumGrade = round($totalGrades / count($grades));
                 echo $student['name'] . " " . $student['lastname'] . " => ";
-                if (round($mediumGrade) >= 6) {
-                    echo "<span class='pass'>" . round($mediumGrade) . "<br></span>";
+                if ($mediumGrade >= 6) {
+                    echo "<div class='pass'>" . $mediumGrade . "</div>";
                 } else {
-                    echo "<span class='reject'>" . round($mediumGrade) . "<br></span>";
+                    echo "<div class='reject'>" . $mediumGrade . "</div>";
                 }
             }
 
